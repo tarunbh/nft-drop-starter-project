@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import './App.css';
 import twitterLogo from './assets/twitter-logo.svg';
 
@@ -7,7 +7,10 @@ const TWITTER_HANDLE = '_buildspace';
 const TWITTER_LINK = `https://twitter.com/${TWITTER_HANDLE}`;
 
 const App = () => {
-  // Actions
+// State
+const [walletAddress, setWalletAddress] = useState(null);  
+
+// Actions
 
   /*
   * Declare your function
