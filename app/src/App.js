@@ -30,6 +30,11 @@ const [walletAddress, setWalletAddress] = useState(null);
           'Connected with Public Key:',
           response.publicKey.toString()
         );
+        /*
+           * Set the user's publicKey in state to be used later!
+           */
+          setWalletAddress(response.publicKey.toString());
+        }
         
       } else {
         alert('Solana object not found! Get a Phantom Wallet 👻');
