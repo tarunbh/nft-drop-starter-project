@@ -10,6 +10,9 @@ const App = () => {
 // State
 const [walletAddress, setWalletAddress] = useState(null);  
 
+{/* Add the condition to show this only if we don't have a wallet address */}
+{!walletAddress && renderNotConnectedContainer()}
+
 // Actions
 
   /*
