@@ -64,16 +64,6 @@ const [walletAddress, setWalletAddress] = useState(null);
       Connect to Wallet
     </button>
   );
-   
-const { solana } = window;
-
-  if (solana) {
-    const response = await solana.connect();
-    console.log('Connected with Public Key:', response.publicKey.toString());
-    setWalletAddress(response.publicKey.toString());
-  }
-};
-  
 
   /*
    * When our component first mounts, let's check to see if we have a connected
