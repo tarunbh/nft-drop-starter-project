@@ -51,7 +51,7 @@ const [walletAddress, setWalletAddress] = useState(null);
    * Let's define this method so our code doesn't break.
    * We will write the logic for this next!
    */
-  const connectWallet = async () => {
+  const connectWallet = async () => {};
 /*
    * We want to render this UI when the user hasn't connected
    * their wallet to our app yet.
