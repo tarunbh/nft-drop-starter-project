@@ -51,7 +51,14 @@ const [walletAddress, setWalletAddress] = useState(null);
    * Let's define this method so our code doesn't break.
    * We will write the logic for this next!
    */
-  const connectWallet = async () => {};
+  const connectWallet = async () => {
+   const { solana } = window;
+   if (solana) {
+    const response = await solana.connect();
+    console.log('Connected with Public Key:', response.publicKey.toString());
+    setWalletAddress(response.publicKey.toString());
+   }
+  };
 /*
    * We want to render this UI when the user hasn't connected
    * their wallet to our app yet.
@@ -83,6 +90,8 @@ const [walletAddress, setWalletAddress] = useState(null);
         <div className="header-container">
           <p className="header">🍭 Candy Drop</p>
           <p className="sub-text">NFT drop machine with fair mint</p>
+ {/* Add the condition to show this only if we don't have a wallet address */}
+          {!walletAddress && renderNotConnectedContainer()}
         </div>
         <div className="footer-container">
           <img alt="Twitter Logo" className="twitter-logo" src={twitterLogo} />
