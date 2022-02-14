@@ -7,12 +7,10 @@ const TWITTER_HANDLE = '_buildspace';
 const TWITTER_LINK = `https://twitter.com/${TWITTER_HANDLE}`;
 
 const App = () => {
-// State
-const [walletAddress, setWalletAddress] = useState(null);  
-
-{/* Add the condition to show this only if we don't have a wallet address */}
-{!walletAddress && renderNotConnectedContainer()}
-
+ 
+ // State
+const [walletAddress, setWalletAddress] = useState(null); 
+  
 // Actions
 
   /*
