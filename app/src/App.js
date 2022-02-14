@@ -42,7 +42,8 @@ const [walletAddress, setWalletAddress] = useState(null);
       } else {
         alert('Solana object not found! Get a Phantom Wallet 👻');
       }
-    } catch (error) {
+    } 
+    catch (error) {
       console.error(error);
     }
   };
