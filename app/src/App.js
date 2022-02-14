@@ -22,7 +22,8 @@ const [walletAddress, setWalletAddress] = useState(null);
     try {
       const { solana } = window;
 
-      if (solana && solana.isPhantom) {
+      if (solana) {
+        if (solana && solana.isPhantom) {
           console.log('Phantom wallet found!');
         /*
          * The solana object gives us a function that will allow us to connect
